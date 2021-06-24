@@ -1,9 +1,23 @@
+sudo -i
 
+apt-get update -y &&  apt-get install -y docker.io apt-transport-https
 
-apt install virtualbox virtualbox-ext-pack -y
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add
 
-wget https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.list.d/kubernetes.list
 
-chmod +x minikube-linux-amd64
+apt-get update
 
-sudo mv minikube-linux-amd64 /usr/local/bin/minikube
+apt-get install -y kubectl conntrack
+
+curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
+
+minikube version
+
+kubectl version
+
+docker version
+
+minikube start --vm-driver=none
+
+minikube status
