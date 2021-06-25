@@ -49,6 +49,8 @@ ex-1:
     kubectl get all
     
     try remove pod: kubectl delete pod <pod-name>
+    
+    try delete deployment and then access nginx from browser. (observation is, service will not work after we deleted the deployment)
 
 ex-2:
 
