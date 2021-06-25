@@ -21,3 +21,5 @@ docker version
 minikube start --vm-driver=none
 
 minikube status
+
+kubectl version
