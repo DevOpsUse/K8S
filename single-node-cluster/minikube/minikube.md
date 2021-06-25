@@ -48,7 +48,7 @@ ex-1:
     
     kubectl get all
     
-    try remove pod: kubectl delete pod <pod-name>
+    try remove pod: kubectl delete pod <pod-name> (observation is, immidiately a new pod will be created by replica set)
     
     try delete deployment and then access nginx from browser. (observation is, service will not work after we deleted the deployment)
 
@@ -66,7 +66,7 @@ ex-2:
     
     ex: http://34.234.91.119:30764/DevOpsWebApp-1.0.13/
     
-    try remove pod: kubectl delete pod <pod-name>
+    try remove pod: kubectl delete pod <pod-name> (observation is, pod will not be created automatically as this pod not controlled by any replica set or deployment)
 
 ex-3:
 
