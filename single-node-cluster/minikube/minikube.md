@@ -15,7 +15,11 @@ Launahc an EC2 ubuntu instance. And connect to it, then install docker.
     apt-get update
     
     apt-get install -y kubectl conntrack
-        
+    
+    kubectl version
+    
+    docker version
+      
 
 ### Install minikube
 
@@ -29,6 +33,8 @@ Launahc an EC2 ubuntu instance. And connect to it, then install docker.
     minikube start --vm-driver=none
 
     minikube status
+    
+    kubectl version
 
 ### Deploy docker images
 
