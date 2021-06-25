@@ -64,6 +64,8 @@ ex-2:
     
     kubectl get all
     
+    ex: http://34.234.91.119:30764/DevOpsWebApp-1.0.13/
+    
     try remove pod: kubectl delete pod <pod-name>
 
 ex-3:
