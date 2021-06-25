@@ -55,8 +55,10 @@ ex-1:
 ex-2:
 
     kubectl run devops-deployment --image=venkatasykam/devopswebapp:1.0.13 --port=8080
+    
+    kubectl get all
 
-    kubectl expose deployment devops-deployment --port=8181 --target-port=8080 --type=NodePort
+    kubectl expose pod devops-deployment --port=8181 --target-port=8080 --type=NodePort
 
     kubectl get svc devops-deployment
     
