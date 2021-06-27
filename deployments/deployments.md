@@ -69,7 +69,30 @@
      kubectl get hpa (11th question in - https://github.com/DevOpsOnlineTraining-2021/K8S/blob/main/Interview-questions.md)
 
      Horizontal Pod Autoscaler ( HPA ): Horizontal Pod Autoscaler scales the number of Pods in a Deployment.
-     Vertical Pod Autoscaler ( VPA )  : Unlike Horizontal Pod Autoscaler ( HPA ), Vertical Pod Autoscaler ( VPA ) automatically adjusts the CPU and Memory attributes for your Pods.
+     Vertical Pod Autoscaler ( VPA )  : Vertical Pod Autoscaler automatically adjusts the CPU and Memory attributes for your Pods.
+     
+     
+#### create deployment using yml
+
+     kubectl apply -f https://raw.githubusercontent.com/DevOpsOnlineTraining-2021/K8S/main/yml/4.devopswebapp-deploy.yml
+     
+     kubectl get all
+     
+     kubectl get pods -l app=devopswebapp
+     
+#### update deployment using yml file
+
+    kubectl apply -f https://raw.githubusercontent.com/DevOpsOnlineTraining-2021/K8S/main/yml/5.devopswebapp-deploy-update.yml
+    
+    kubectl get pods -l app=nginx
+    
+#### scaleup deployment using yml file
+
+    kubectl apply -f https://raw.githubusercontent.com/DevOpsOnlineTraining-2021/K8S/main/yml/6.devopswebapp-deploy-scale.yml
+    
+    kubectl get pods -l app=nginx
+
+
      
      
      
