@@ -84,16 +84,21 @@
 
     kubectl apply -f https://raw.githubusercontent.com/DevOpsOnlineTraining-2021/K8S/main/yml/5.devopswebapp-deploy-update.yml
     
-    kubectl get pods -l app=nginx
+    kubectl get pods -l app=devopswebapp
     
 #### scaleup deployment using yml file
 
     kubectl apply -f https://raw.githubusercontent.com/DevOpsOnlineTraining-2021/K8S/main/yml/6.devopswebapp-deploy-scale.yml
     
-    kubectl get pods -l app=nginx
+    kubectl get pods -l app=devopswebapp
 
+#### Autoscale using yml file
 
-     
+    kubectl apply -f https://raw.githubusercontent.com/DevOpsOnlineTraining-2021/K8S/main/yml/7.devopswebapp-deploy-hpa.yml
+
+    kubectl get pods -l app=devopswebapp
+    
+    kubectl get all
      
      
      
