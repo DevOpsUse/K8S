@@ -1,0 +1,27 @@
+# kubectl create -f jenkins-empty-vol-deploy.yml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins-vol-deploy
+spec:
+  selector:
+    matchLabels:
+      app: jenkins
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: jenkins
+    spec:
+       volumes:
+       - name: jenkins-vol
+         hostPath:
+            emptyDir: {}
+       containers:
+       - name: jenkins
+         image: jenkins
+         ports:
+         - containerPort: 8080
+         volumeMounts:
+         - name: jenkins-vol
+           mountPath: /var/jenkins_home
