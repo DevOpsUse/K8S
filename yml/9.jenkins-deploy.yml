@@ -1,0 +1,49 @@
+# jenkins-deploy
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins-deploy
+spec:
+  selector:
+    matchLabels:
+      app: jenkins
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: jenkins
+    spec:
+      containers:
+      - name: jenkins
+        image: jenkins
+        ports:
+        - containerPort: 8080
+---
+# jenkins-service
+apiVersion: v1
+kind: Service
+metadata:
+  name: jenkins-deploy
+  labels:
+    app: jenkins
+spec:
+  type: NodePort
+  ports:
+  - port: 8080
+    nodePort: 30081
+  selector:
+    app: jenkins
+---
+# jenkins-hpa
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: jenkins
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: jenkins-deployment
+  minReplicas: 3
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 50
