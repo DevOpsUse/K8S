@@ -79,4 +79,9 @@
         2. Replicas controller
         3. Cloud controller
 
-11. 
+11. HPA vs VPA
+	     
+     	Horizontal Pod Autoscaler ( HPA ): Horizontal Pod Autoscaler scales the number of Pods in a Deployment.
+     	Vertical Pod Autoscaler ( VPA )  : Unlike Horizontal Pod Autoscaler ( HPA ), Vertical Pod Autoscaler ( VPA ) automatically adjusts the CPU and Memory attributes for your Pods.
+	
+	
