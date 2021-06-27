@@ -85,3 +85,7 @@
      	Vertical Pod Autoscaler ( VPA )  : Unlike Horizontal Pod Autoscaler ( HPA ), Vertical Pod Autoscaler ( VPA ) automatically adjusts the CPU and Memory attributes for your Pods.
 	
 	
+![image](https://user-images.githubusercontent.com/24622526/123553032-b95edc00-d796-11eb-8cc6-e1988e1492ce.png)
+
+
+12. 
