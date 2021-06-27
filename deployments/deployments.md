@@ -109,11 +109,40 @@
      
 ## Example-3
 
-#### Create deployment, service, hpa, volumes in a single file
+#### Create deployment, service, hpa in a single yml file
 
-    kubectl apply -f https://raw.githubusercontent.com/DevOpsOnlineTraining-2021/K8S/main/yml/7.devopswebapp-deploy-hpa.yml
+    kubectl apply -f https://raw.githubusercontent.com/DevOpsOnlineTraining-2021/K8S/main/yml/9.jenkins-deploy.yml
 
-     
+## Example-4
+
+#### Jenkins volumes hostpath
+
+    chown -R 1000:1000 /var/lib/jenkins
+
+    kubectl apply -f https://raw.githubusercontent.com/DevOpsOnlineTraining-2021/K8S/main/yml/10.jenkins-vol-deploy.yml
+    
+    ll /var/lib/jenkins
+    
+    kubectl delete deployment jenkins-vol-deploy
+    
+    ll /var/lib/jenkins
+    
+#### Jenkins volumes emptyDir
+
+    kubectl apply -f https://raw.githubusercontent.com/DevOpsOnlineTraining-2021/K8S/main/yml/11.jenkins-empty-vol-deploy.yml
+    
+    kubectl get all
+    
+    ll /var/lib/kubelet/pods/8e44e612-0248-486c-9bb1-2a5c5734a4d8/volumes/kubernetes.io~empty-dir/jenkins-vol-empty
+    
+    kubectl delete deployment jenkins-vol-deploy
+    
+    find / -name "jenkins-vol-empty"
+    
+    
+
+    
+    
      
      
     
