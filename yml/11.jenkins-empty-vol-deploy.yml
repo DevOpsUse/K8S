@@ -15,8 +15,7 @@ spec:
     spec:
        volumes:
        - name: jenkins-vol
-         hostPath:
-            emptyDir: {}
+         emptyDir: {}
        containers:
        - name: jenkins
          image: jenkins
