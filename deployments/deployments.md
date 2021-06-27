@@ -36,3 +36,46 @@
 
 ## Example-2
 
+#### create deployment using command
+
+    kubectl create deployment devopsweb --image=venkatasykam/devopswebapp:1.0.13 --replicas=2
+    
+    kubectl get all
+    
+    kubectl describe deployment devopsweb (observe the image version)
+    
+    kubectl create service nodeport devopsweb --tcp=8080:8080
+    
+    kubectl get svc devopsweb
+    
+    curl http://[publicIP]:[nodePort]//appname
+    
+    ex: http://3.83.178.35:30628/DevOpsWebApp-1.0.13/
+    
+#### Update the deployment using command
+
+     kubectl set image deployment/devopsweb devopswebapp=venkatasykam/devopswebapp:1.0.14
+     
+     kubectl describe deployment devopsweb (observe the image version whether its updated or not)
+     
+#### Scaling a Deployment using command
+
+     kubectl scale deployment devopsweb --replicas=5
+     
+     or
+     
+     kubectl autoscale deployment devopsweb --min=5 --max=10 --cpu-percent=60
+     
+     kubectl get hpa (11th question in - https://github.com/DevOpsOnlineTraining-2021/K8S/blob/main/Interview-questions.md)
+
+     Horizontal Pod Autoscaler ( HPA ): Horizontal Pod Autoscaler scales the number of Pods in a Deployment.
+     Vertical Pod Autoscaler ( VPA )  : Unlike Horizontal Pod Autoscaler ( HPA ), Vertical Pod Autoscaler ( VPA ) automatically adjusts the CPU and Memory attributes for your Pods.
+     
+     
+     
+     
+     
+     
+     
+    
+
