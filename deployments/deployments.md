@@ -113,7 +113,7 @@
 
     kubectl apply -f https://raw.githubusercontent.com/DevOpsOnlineTraining-2021/K8S/main/yml/9.jenkins-deploy.yml
 
-## Example-4
+## Example-4: Volumes
 
 #### Jenkins volumes hostpath
 
@@ -138,6 +138,14 @@
     kubectl delete deployment jenkins-vol-deploy
     
     find / -name "jenkins-vol-empty"
+    
+#### Persistance Volume and Persistance Volume Claim
+
+    mkdir /root/nginx_vol
+    
+    echo "<center><h1>I am from $hostname</h1></center>" > /mnt/nginx_vol/index.html
+
+    kubectl apply https://raw.githubusercontent.com/DevOpsOnlineTraining-2021/K8S/main/yml/12.nginx-pv.yml
     
     
 
