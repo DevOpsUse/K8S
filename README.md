@@ -19,8 +19,5 @@
 ![image](https://user-images.githubusercontent.com/24622526/123553460-e4e2c600-d798-11eb-8a14-cd357396084f.png)
 
 
-Scaling overview: Running 1 pod
-
-
 
 
