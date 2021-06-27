@@ -6,10 +6,9 @@ metadata:
   labels:
     app: devopswebapp
 spec:
-  ports:
-  - name: http
-    port: 8080
-    nodePort: 30808
-  selector:    
-    app: devopswebapp
   type: NodePort
+  ports:
+  - port: 8080
+    nodePort: 30808
+  selector:
+    app: devopswebapp
