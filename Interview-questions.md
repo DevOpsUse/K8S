@@ -88,4 +88,4 @@
 ![image](https://user-images.githubusercontent.com/24622526/123553032-b95edc00-d796-11eb-8cc6-e1988e1492ce.png)
 
 
-12. 
+12. HPA: https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/
