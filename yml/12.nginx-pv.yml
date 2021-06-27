@@ -23,6 +23,7 @@ spec:
   storageClassName: manual
   accessModes:
     - ReadWriteOnce
+  volumeMode: Filesystem
   resources:
     requests:
       storage: 1Gi
