@@ -23,7 +23,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: jenkins-deploy
+  name: jenkins-service
   labels:
     app: jenkins
 spec:
@@ -38,7 +38,7 @@ spec:
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: jenkins
+  name: jenkins-hpa
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
