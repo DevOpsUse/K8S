@@ -1,0 +1,57 @@
+# Persistent Volume
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: jenkins-pv-volume
+  labels:
+    type: local
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/var/lib/jenkins"
+---
+# Persistent Volume Claim
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: jenkins-pv-claim
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteOnce
+  volumeMode: Filesystem
+  resources:
+    requests:
+      storage: 1Gi
+---
+# Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins-vol
+spec:
+  selector:
+    matchLabels:
+      app: jenkins
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: jenkins
+    spec:
+      volumes:
+      - name: jenkins-pv-storage
+        persistentVolumeClaim::
+          claimName: jenkins-pv-claim
+      containers:
+      - name: jenkins
+        image: jenkins/jenkins
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: jenkins-pv-storage
+          mountPath: /var/jenkins_home
