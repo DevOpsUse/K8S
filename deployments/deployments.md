@@ -11,6 +11,8 @@
     
 #### create deployment using yml file
 
+> Refer: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+
     kubectl create -f https://raw.githubusercontent.com/DevOpsOnlineTraining-2021/K8S/main/yml/1.nginx-deployment.yml
     
     or
@@ -32,6 +34,10 @@
     kubectl apply -f https://raw.githubusercontent.com/DevOpsOnlineTraining-2021/K8S/main/yml/3.nginx-deployment-scale.yml
     
     kubectl get pods -l app=nginx
+    
+#### create service using yml
+
+    kubectl apply -f https://raw.githubusercontent.com/DevOpsOnlineTraining-2021/K8S/main/yml/8.devopswebapp-service.yml
 
 
 ## Example-2
@@ -101,7 +107,12 @@
     kubectl get all
      
      
-     
+## Example-3
+
+#### Create deployment, service, hpa, volumes in a single file
+
+    kubectl apply -f https://raw.githubusercontent.com/DevOpsOnlineTraining-2021/K8S/main/yml/7.devopswebapp-deploy-hpa.yml
+
      
      
      
