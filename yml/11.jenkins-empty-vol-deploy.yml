@@ -14,7 +14,7 @@ spec:
         app: jenkins
     spec:
        volumes:
-       - name: jenkins-vol
+       - name: jenkins-vol-empty
          emptyDir: {}
        containers:
        - name: jenkins
@@ -22,5 +22,5 @@ spec:
          ports:
          - containerPort: 8080
          volumeMounts:
-         - name: jenkins-vol
+         - name: jenkins-vol-empty
            mountPath: /var/jenkins_home
