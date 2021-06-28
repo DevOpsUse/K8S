@@ -116,7 +116,25 @@
 
     kubectl apply -f https://raw.githubusercontent.com/DevOpsOnlineTraining-2021/K8S/main/yml/9.jenkins-deploy.yml
 
-## Example-4: Volumes
+## Example-4: update the deployments using commands
+
+    kubectl create deployment nginx-deploy --image=nginx --replicas=2
+    
+    kubectl describe deployment nginx-deploy
+    
+    kubectl edit deployment nginx-deploy
+    
+    update nginx image tags as 1.14.2 and save
+    
+    kubectl describe deployment nginx-deploy
+    
+    kubectl edit deployment nginx-deploy
+    
+    update nginx image tags as 1.16.1 and save
+    
+    kubectl describe deployment nginx-deploy
+
+## Example-5: Volumes
 
 #### Jenkins volumes hostpath
 
