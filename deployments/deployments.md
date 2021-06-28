@@ -162,7 +162,7 @@
     
 #### Persistance Volume and Persistance Volume Claim
 
-    mkdir /root/nginx_vol
+    mkdir /mnt/nginx_vol
     
     echo "<center><h1>I am from $hostname</h1></center>" > /mnt/nginx_vol/index.html
 
