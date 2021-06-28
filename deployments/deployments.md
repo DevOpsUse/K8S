@@ -37,7 +37,7 @@
     
 #### create service using yml
 
-    kubectl apply -f https://raw.githubusercontent.com/DevOpsOnlineTraining-2021/K8S/main/yml/8.devopswebapp-service.yml
+    kubectl apply -f https://raw.githubusercontent.com/DevOpsOnlineTraining-2021/K8S/main/yml/3.1.nginx-service.yml
 
 
 ## Example-2
@@ -106,7 +106,10 @@
     
     kubectl get all
      
-     
+#### create service using yml
+
+    kubectl apply -f https://raw.githubusercontent.com/DevOpsOnlineTraining-2021/K8S/main/yml/8.devopswebapp-service.yml
+
 ## Example-3
 
 #### Create deployment, service, hpa in a single yml file
