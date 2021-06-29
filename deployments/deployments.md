@@ -160,14 +160,6 @@
     
     find / -name "jenkins-vol-empty"
     
-#### Persistance Volume and Persistance Volume Claim
-
-    mkdir /mnt/nginx_vol
-    
-    echo "<center><h1>I am from $hostname</h1></center>" > /mnt/nginx_vol/index.html
-
-    kubectl apply https://raw.githubusercontent.com/DevOpsOnlineTraining-2021/K8S/main/yml/12.nginx-pv.yml
-    
     
 
     
