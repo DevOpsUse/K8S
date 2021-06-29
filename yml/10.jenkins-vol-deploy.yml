@@ -20,7 +20,7 @@ spec:
             type: Directory
        containers:
        - name: jenkins
-         image: jenkins
+         image: jenkins/jenkins:latest
          ports:
          - containerPort: 8080
          volumeMounts:
